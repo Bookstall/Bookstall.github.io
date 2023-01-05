@@ -2,7 +2,7 @@
 #   Main Configs   #
 # ---------------- #
 baseurl:
-url: https://mazhuang.org
+url: https://bookstall.github.io/
 date_format: "ordinal"
 title: 码志
 subtitle: "公众号：闷骚的程序员"
@@ -11,7 +11,7 @@ keywords: 码志, Zhuang Ma, mzlogin, mazhuang, 闷骚的程序员
 timezone: Asia/Shanghai
 encoding: "utf-8"
 # 页面左下角显示的年份
-since: 2015
+since: 2023
 # 源码仓库，请替换成自己的
 repository: Bookstall/Bookstall.github.io
 # 对 css 和 js 资源的 cdn 加速配置
@@ -24,11 +24,11 @@ components:
     # weibo,qq,wechat,douban,qzone,linkedin,facebook,twitter
     share:
         enabled: false
-        hide-platforms: qq,facebook
+        hide-platforms: qq,wechat,facebook
     # 不蒜子访问统计
     busuanzi:
         enabled: false
-        start_date: 2020-05-03
+        start_date: 2023-01-01
     # My Popular Repositories
     side_bar_repo:
         enabled: true
@@ -54,12 +54,12 @@ highlight_theme: github
 # ---------------- #
 #      Author      #
 # ---------------- #
-author: Zhuang Ma
+author: Bookstall
 organization: 
 organization_url: 
-github_username: mzlogin
-location: Wuhan, China
-email: chumpma@gmail.com
+github_username: Bookstall
+location: Guangzhou, China
+email: 1369740347@qq.com
 
 # ---------------- #
 #    Navigation    #
@@ -73,13 +73,13 @@ navs:
     href: /categories/
     label: 分类
 
-#   -
-#     href: /archives/
-#     label: 归档
+  -
+    href: /archives/
+    label: 归档
 
-#   -
-#     href: /open-source/
-#     label: 开源
+  -
+    href: /open-source/
+    label: 开源
 
   -
     href: /wiki/
