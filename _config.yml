@@ -2,12 +2,12 @@
 #   Main Configs   #
 # ---------------- #
 baseurl:
-url: https://bookstall.github.io/
+url: https://bookstall.github.io
 date_format: "ordinal"
-title: 码志
-subtitle: "公众号：闷骚的程序员"
-description: "马壮的个人博客，公众号：闷骚的程序员"
-keywords: 码志, Zhuang Ma, mzlogin, mazhuang, 闷骚的程序员
+title: Bookstall
+subtitle: "逃离地球的Bookstall"
+description: "Bookstall的个人博客"
+keywords: Bookstall
 timezone: Asia/Shanghai
 encoding: "utf-8"
 # 页面左下角显示的年份
@@ -173,6 +173,13 @@ simple_jekyll_search:
     fulltext: false
     # 最多显示多少条搜索结果
     limit: 10
+
+# ---------------- #
+#      Baidu       #
+# ---------------- #
+
+baidu:
+    analytics_id: f74675434200bf1e7972364271ff7215
 
 # ---------------- #
 #      Google      #
