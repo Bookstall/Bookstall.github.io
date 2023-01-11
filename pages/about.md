@@ -8,7 +8,7 @@ menu: 关于
 permalink: /about/
 ---
 
-我是马壮，码而生，码而立。
+我是Bookstall，码而生，码而立。
 
 仰慕「优雅编码的艺术」。
 

@@ -1,17 +1,25 @@
-# 码志
+<!--
+ * @Author: 陈沛锨 1369740347@qq.com
+ * @Date: 2023-01-01 17:49:59
+ * @LastEditors: 陈沛锨 1369740347@qq.com
+ * @LastEditTime: 2023-01-10 15:30:49
+ * @FilePath: \Bookstall.github.io\readme.md
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+# Bookstall's Blog
 
-我的个人博客：<https://mazhuang.org>，欢迎 Star 和 Fork。
-
+我的个人博客：<https://bookstall.github.io/>，欢迎 Star 和 Fork。
+s
 ## 概览
 
 <!-- vim-markdown-toc GFM -->
 
-* [效果预览](#效果预览)
-* [Fork 指南](#fork-指南)
-* [使用文档](#使用文档)
-* [经验与思考](#经验与思考)
-* [联系我](#联系我)
-* [致谢](#致谢)
+- [Bookstall's Blog](#bookstalls-blog)
+  - [概览](#概览)
+  - [效果预览](#效果预览)
+  - [Fork 指南](#fork-指南)
+  - [经验与思考](#经验与思考)
+  - [致谢](#致谢)
 
 <!-- vim-markdown-toc -->
 
@@ -57,11 +65,7 @@ Fork 本项目之后，还需要做一些事情才能让你的页面「正确」
 
    skills.yml 和 social.yml 里内容的含义可以参考：[_data 目录下的 yml 文件内容含义](https://mazhuang.org/2020/05/03/blog-template-qna/#_data-%E7%9B%AE%E5%BD%95%E4%B8%8B%E7%9A%84-yml-%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9%E5%90%AB%E4%B9%89)。
 
-## 使用文档
 
-- [本博客模板常见问题 Q & A](https://mazhuang.org/2020/05/03/blog-template-qna/)。
-
-- 在本地预览博客效果可以参考 [Setting up your Pages site locally with Jekyll][2]。
 
 ## 经验与思考
 
@@ -79,15 +83,14 @@ Fork 本项目之后，还需要做一些事情才能让你的页面「正确」
 
 * 可以学习一下那些高质量的博主，他们的行文，内容组织方式，有什么值得借鉴的地方。
 
-## 联系我
-
-如果对本博客模板或者内容有任何建议，可以通过 [Issues](https://github.com/mzlogin/mzlogin.github.io/issues) 或者微信公众号「闷骚的程序员」与我取得联系。
-
-<img width="192px" height="192px" src="https://mazhuang.org/assets/images/qrcode.jpg"/>
 
 ## 致谢
 
-本博客外观基于 [DONGChuan](https://dongchuan.github.io) 修改，感谢！
+- 本博客外观基于 [mzlogin](https://dongchuan.github.io) 修改，感谢！
+
+- 本博客的评论系统使用的是 [giscus](https://github.com/giscus/giscus)，感谢！
+
+
 
 [1]: https://github.com/mzlogin/chinese-copywriting-guidelines
 [2]: https://help.github.com/articles/setting-up-your-pages-site-locally-with-jekyll/
