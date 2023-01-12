@@ -17,7 +17,7 @@ repository: Bookstall/Bookstall.github.io
 # 对 css 和 js 资源的 cdn 加速配置
 cdn:
     jsdelivr:
-        enabled: false
+        enabled: true
 # 可选组件配置
 components:
     # 分享
@@ -189,6 +189,6 @@ google:
     adsense:
         footer: true
         sidebar: true 
-        sidebar-detail: true 
+        sidebar-detail: false
         content_header: false
         content_footer: false
