@@ -52,7 +52,6 @@ Google Adsense 是一个由 Google 公司设置的广告计划，会员可以利
 
 
 
-
 ## 添加 ads.txt
 
 > **参考：**
@@ -73,6 +72,9 @@ Google Adsense 是一个由 Google 公司设置的广告计划，会员可以利
 ## 参考
 
 - 维基百科：[Google AdSense](https://zh.wikipedia.org/zh-cn/Google_AdSense)
+
 - 博客：[github建站系列(17) -- 为你的 blog 添加google adsence 广告](https://kebingzao.com/2020/12/07/github-site-17/)
+
 - 博客：[给 Jekyll Blog 添加 AdSense 广告](https://gohalo.me/post/add-google-adsense-to-jekyll-blog.html)
+
 - 官方文档：[ads.txt 指南](https://support.google.com/adsense/answer/7532444)

@@ -185,7 +185,7 @@ baidu:
 #      Google      #
 # ---------------- #
 google:
-    analytics_id: UA-80669434-1
+    analytics_id: G-S68VCV2RN6
     adsense:
         footer: true
         sidebar: true 

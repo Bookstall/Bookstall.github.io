@@ -8,7 +8,7 @@ keywords: Google Analysics, Baidu Tongji, Blog, Jekyll
 title: Google Analysics And Baidu Tongji in Blog
 ---
 
-本文主要介绍两种网站分析工具：Google Analytics（谷歌分析） 和 Baidu Tongji（百度统计）。
+本文主要介绍两种网站分析工具：**Google Analytics（谷歌分析）** 和 **Baidu Tongji（百度统计）**。
 
 ## Google Analytics
 
@@ -95,11 +95,17 @@ Google 于 2022 年 3 月 16 日宣布，将以新一代的成效评估解决方
 我们选择 "网站" 数据流，并且使用默认的 "增强型衡量功能"，具体包括：
 
 - 网页浏览量
+
 - 滚动次数
+
 - 出站点击次数
+
 - 网站搜索
+
 - 表单互动次数
+
 - 视频互动度
+
 - 文件下载次数
 
 最终，我们成功创建了一个 "网站" 数据流，并且能够看到该数据流的详细信息，包括：数据流名称、数据流网址、数据流 ID 以及 衡量 ID。
@@ -122,10 +128,7 @@ Google 于 2022 年 3 月 16 日宣布，将以新一代的成效评估解决方
 </script>
 ```
 
-#### 安装代码
-
-Jekyll
-
+只需要将该代码添加到 `<head></head>` 中即可。
 
 
 
@@ -138,6 +141,7 @@ Jekyll
 ## 参考
 
 - 维基百科：[Google 分析](https://zh.wikipedia.org/zh-cn/Google%E5%88%86%E6%9E%90)
+
 - 知乎：[谷歌流量分析工具Google Analytics使用方法指南教程](https://zhuanlan.zhihu.com/p/136378374)
 
 

@@ -9,15 +9,13 @@ title: Search In Static Blog
 ---
 
 
-## Search In Static Blog
-
 下面主要介绍两个开源的 jekyll 搜索项目：[Simple Jekyll Search](https://github.com/christian-fei/Simple-Jekyll-Search) 和 [Jekyll Tipue Search](https://github.com/jekylltools/jekyll-tipue-search)。
 
-### Simple Jekyll Search
+## Simple Jekyll Search
 
 > 在该博客中，目前主要使用的是 Simple Jekyll Search 这一项目。
 
-#### 引入 Simple Jekyll Search
+### 引入 Simple Jekyll Search
 
 与前端常见的引入 JS 代码的方式一样，我们需要引入 `simple-jekyll-search.js` 或者 `simple-jekyll-search.min.js`（推荐）这已 JS 文件。
 
@@ -27,7 +25,7 @@ title: Search In Static Blog
 <script src="/simple-jekyll-search.min.js"></script>
 ```
 
-#### 编写 search_data.json
+### 编写 search_data.json
 
 我们还需要设置搜索的逻辑，以及返回的搜索结果的具体形式。因此，我们需要设置一个 `search_data.json` 文件，用于完成这些功能。
 
@@ -52,7 +50,7 @@ layout: null
 -->
 ```
 
-#### 添加搜索的 HTML 元素
+### 添加搜索的 HTML 元素
 
 我们还需要编写一个 HTML 的输入框，以供用户输入要搜索的关键字，以及用于展示搜索结果的容器，代码如下所示：
 
@@ -64,7 +62,7 @@ layout: null
 ```
 
 
-#### 编写搜索的主代码
+### 编写搜索的主代码
 
 ```html
 <script>
@@ -80,7 +78,7 @@ layout: null
 </script>
 ```
 
-#### 效果演示
+### 效果演示
 
 最终的演示效果如下图所示：
 
@@ -89,20 +87,22 @@ layout: null
 > 图片来源：[Jekyll个人博客实现搜索功能](https://zoharandroid.github.io/2019-08-01-jekyll%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%AE%9E%E7%8E%B0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/)
 
 
-### Jekyll Tipue Search
+## Jekyll Tipue Search
 
 更加高级的搜索组件，可以显示搜索的结果、某次搜索所用的时间、关键词对应的文本内容。
 
-#### 效果演示
+### 效果演示
 
 演示地址：https://jekylltools.github.io/jekyll-tipue-search/search/
 
 
 
-### 参考
+## 参考
 
 - Simple-Jekyll-Search：https://github.com/christian-fei/Simple-Jekyll-Search
+
 - Jekyll Tipue Search：https://github.com/jekylltools/jekyll-tipue-search
+
 - 博客：[Jekyll个人博客实现搜索功能](https://zoharandroid.github.io/2019-08-01-jekyll%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%AE%9E%E7%8E%B0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/)
 
 
