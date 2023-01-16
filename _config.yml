@@ -107,7 +107,7 @@ kramdown:
     input: GFM
 highlighter: rouge
 # 代码高亮、行号
-prism: false
+prism: true
 paginate: 10
 lsi: false
 quiet: false

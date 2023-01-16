@@ -33,7 +33,7 @@ layout: default
             {% endif %}
             <!-- 阅读量统计 -->
             <span class="meta-info">
-              {% if site.components.busuanzi.enabled == true %}
+              {% if site.components.busuanzi.enabled == true and page.visit-stat != 'hidden' and page.layout != 'mindmap' %}
               {% include reading-stat.html %}
               {% endif %}
             </span>

@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="{{ assets_base_url }}/assets/css/globals/responsive.css">
   <link rel="stylesheet" href="{{ assets_base_url }}/assets/css/posts/index.css">
   <link rel="stylesheet" href="{{ assets_base_url }}/assets/vendor/octicons/octicons/octicons.css">
-  {% if site.prism %}
+  {% if site.prism == true %}
   <link rel="stylesheet" href="{{ assets_base_url }}/assets/vendor/prism/css/prism.css">
   {% endif %}
   {% assign highlight_base_url = 'https://mazhuang.org/rouge-themes/dist' %}
@@ -80,11 +80,22 @@
   <script src="{{ assets_base_url }}/assets/vendor/jquery/dist/jquery.min.js"></script>
   <script src="{{ assets_base_url }}/assets/js/jquery-ui.js"></script>
   <script src="{{ assets_base_url }}/assets/js/main.js"></script>
-  {% if site.prism %}
-  <script src="{{ assets_base_url }}/assets/vendor/prism/js/prism.min.js"></script>
+  <!-- busuanzi 统计 -->
+  {% if site.components.busuanzi.enabled == true and page.visit-stat != 'hidden' and page.layout != 'mindmap' %}
+  <script async src="{{ assets_base_url }}/assets/vendor/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  {% endif %}
+  <!-- prism 代码高亮、显示行号 -->
+  {% if site.prism == true %}
+  <script>
+      window.Prism = window.Prism || {};
+      window.Prism.manual = false;
+  </script>
+  <script src="{{ assets_base_url }}/assets/vendor/prism/js/prism.js"></script>
+  <meta name="referrer" content="no-referrer-when-downgrade">
   {% endif %}
 
-  {% if site.prism %}
+  <!-- prism 代码高亮、显示行号 -->
+  {% if site.prism == true %}
   <!-- line number for code block -->
   <script>
       var pres = document.getElementsByTagName("pre");

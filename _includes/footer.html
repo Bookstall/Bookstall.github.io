@@ -27,9 +27,9 @@
             <li><a href="{{ site.url }}{{ site.subscribe_rss }}"><span class="octicon octicon-rss"
                         style="color:orange;"></span></a></li>
         </ul>
-
+        {% if site.components.busuanzi.enabled == true and page.visit-stat != 'hidden' and page.layout != 'mindmap' %}
         {% include visit-stat.html %}
-
+        {% endif %}
     </div>
 </footer>
 <div class="tools-wrapper">
