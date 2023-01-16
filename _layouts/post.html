@@ -31,6 +31,12 @@ layout: default
               strip_newlines | remove: " " | size | divided_by: 350 | plus: 1 }} 分钟
             </span>
             {% endif %}
+            <!-- 阅读量统计 -->
+            <span class="meta-info">
+              {% if site.components.busuanzi.enabled == true %}
+              {% include reading-stat.html %}
+              {% endif %}
+            </span>
           </div>
         </div>
       </div>

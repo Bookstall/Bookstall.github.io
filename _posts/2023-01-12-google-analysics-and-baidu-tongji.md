@@ -1,18 +1,19 @@
 ---
 layout: post
+visit-stat: true
 author: bookstall
 tags: Blog
 categories: [Blog]
-description: Google Analysics And Baidu Tongji in Blog
+description: Google Analysics and Baidu Tongji in Blog
 keywords: Google Analysics, Baidu Tongji, Blog, Jekyll
-title: Google Analysics And Baidu Tongji in Blog
+title: Google Analysics and Baidu Tongji in Blog
 ---
 
 本文主要介绍两种网站分析工具：**Google Analytics（谷歌分析）** 和 **Baidu Tongji（百度统计）**。
 
 ## Google Analytics
 
-**Google 分析（Google Analytics，GA）**是一个由 Google 所提供的网站流量统计服务。Google 分析（Analytics）现在是互联网上使用最广泛的网络分析服务。Google Analytics 还提供了一个 SDK，允许从 iOS 和 Android 应用程序收集使用数据，称为 Google Analytics for Mobile Apps。
+**Google 分析（Google Analytics，GA）**是一个由 Google 所提供的网站流量统计服务。Google 分析（Analytics）现在是互联网上使用最广泛的网络分析服务。Google Analytics 还提供了一个 SDK，允许从 iOS 和 Android 应用程序收集使用数据，称为 **Google Analytics for Mobile Apps**。
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Google_Analytics_Logo_2015.png/330px-Google_Analytics_Logo_2015.png)
 
@@ -24,7 +25,7 @@ Google 于 2022 年 3 月 16 日宣布，将以新一代的成效评估解决方
 > - [Google Analytics](http://www.google.com/intl/en/analytics/)（英文）
 > - [Google 分析](http://www.google.cn/intl/zh-CN/analytics/)（简体中文）
 > - [Google 分析](http://www.google.com/intl/zh-TW/analytics/)（繁体中文）
-> - Google Analytics 帮助中心：https://support.google.com/analytics/
+> - [Google Analytics 帮助中心](https://support.google.com/analytics/)
 
 ### 通过 GA 可以获得的统计数据
 

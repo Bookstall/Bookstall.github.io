@@ -22,12 +22,13 @@ cdn:
 components:
     # 分享
     # weibo,qq,wechat,douban,qzone,linkedin,facebook,twitter
+    # facebook,twitter
     share:
-        enabled: false
-        hide-platforms: qq,wechat,facebook
+        enabled: true
+        hide-platforms: douban,qzone,linkedin
     # 不蒜子访问统计
     busuanzi:
-        enabled: false
+        enabled: true
         start_date: 2023-01-01
     # My Popular Repositories
     side_bar_repo:
@@ -105,6 +106,8 @@ markdown: kramdown
 kramdown:
     input: GFM
 highlighter: rouge
+# 代码高亮、行号
+prism: false
 paginate: 10
 lsi: false
 quiet: false
@@ -174,6 +177,11 @@ simple_jekyll_search:
     fulltext: true
     # 最多显示多少条搜索结果
     limit: 10
+
+# ---------------- #
+#      Music       #
+# ---------------- #
+music_id: 368838
 
 # ---------------- #
 #      Baidu       #

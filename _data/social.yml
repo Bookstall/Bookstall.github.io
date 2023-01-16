@@ -1,6 +1,6 @@
 - sitename: GitHub
-  name: mzlogin
-  url: https://github.com/mzlogin
+  name: Bookstall
+  url: https://github.com/Bookstall
 
 - sitename: 掘金
   name: mzlogin
@@ -11,8 +11,8 @@
   url: https://www.linkedin.com/in/mazhuang
 
 - sitename: 博客
-  name: 码志
-  url: http://mazhuang.org
+  name: Bookstall
+  url: http://bookstall.github.io
 
 - sitename: 微博
   name: mzlogin
