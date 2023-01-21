@@ -184,6 +184,11 @@ simple_jekyll_search:
 music_id: 368838
 
 # ---------------- #
+#   Image Gallery  #
+# ---------------- #
+fancybox: true
+
+# ---------------- #
 #      Baidu       #
 # ---------------- #
 baidu:

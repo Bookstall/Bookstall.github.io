@@ -2,11 +2,11 @@
 layout: post
 visit-stat: true
 author: bookstall
-tags: Blog
+tags: Blog, Jekyll
 categories: [Blog]
 description: Google Analysics and Baidu Tongji in Blog
 keywords: Google Analysics, Baidu Tongji, Blog, Jekyll
-title: Google Analysics and Baidu Tongji in Blog
+title: 在 Jekyll 博客中添加网站分析工具
 ---
 
 本文主要介绍两种网站分析工具：**Google Analytics（谷歌分析）** 和 **Baidu Tongji（百度统计）**。
@@ -15,7 +15,7 @@ title: Google Analysics and Baidu Tongji in Blog
 
 **Google 分析（Google Analytics，GA）**是一个由 Google 所提供的网站流量统计服务。Google 分析（Analytics）现在是互联网上使用最广泛的网络分析服务。Google Analytics 还提供了一个 SDK，允许从 iOS 和 Android 应用程序收集使用数据，称为 **Google Analytics for Mobile Apps**。
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Google_Analytics_Logo_2015.png/330px-Google_Analytics_Logo_2015.png)
+![谷歌分析图标](https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Google_Analytics_Logo_2015.png/330px-Google_Analytics_Logo_2015.png)
 
 Google Analytics 原为 Urchin 所营运的付费网站流量统计服务，2005 年 4 月，Google 宣布购并 Urchin 公司，并将原本需要付费的部分服务开放免费使用。此后，基本版可免费使用，但高级版本仍然需要付费。透过在网站中埋入Google Analytics 追踪码，网站主们可以获取进站流量的资料，包括来源、用户、设备、访问路径等，透过 Google Analytics，可以更全面的了解品牌的受众，进而为潜在客户优化购买、访问流程，提高转单意愿，对于网页入门来说是非常推荐使用的工具。
 
@@ -47,25 +47,25 @@ Google 于 2022 年 3 月 16 日宣布，将以新一代的成效评估解决方
 
 在真正使用 Google Analytics 这个工具之前，我们最好先了解下相关的词汇含义，可以让我们更快地上手这个工具。
 
-- 用户（Users）- 即访问网站的用户；可以查看选定的日期范围内有多少用户访问了网站至少一个页面。
+- **用户（Users）**：即访问网站的用户；可以查看选定的日期范围内有多少用户访问了网站至少一个页面。
 
-- 报告（Reports）- Google Analytics 提供超过 50 份免费报告，并能够创建自定义报告，帮助你分析网站数据，统计流量和记录访问者行为。数据图是常见的报告形式之一。
+- **报告（Reports）**：Google Analytics 提供超过 50 份免费报告，并能够创建自定义报告，帮助你分析网站数据，统计流量和记录访问者行为。数据图是常见的报告形式之一。
 
-- 会话（Sessions）– 网站用户与网站之间的交互行为。
+- **会话（Sessions）**：网站用户与网站之间的交互行为。
 
-- 流量来源（Traffic Sources）– 显示用户是如何访问到你的网站的，访问渠道包括自然搜索（Organic Search）、社交媒体（Social）、付费广告（Paid Search）、外链引流（Referral）和直接输入网址访问（Direct）。
+- **流量来源（Traffic Sources）**：显示用户是如何访问到你的网站的，访问渠道包括自然搜索（Organic Search）、社交媒体（Social）、付费广告（Paid Search）、外链引流（Referral）和直接输入网址访问（Direct）。
 
-- 活动（Campaigns）– 跟踪用户发现网站的特定方式。比如，Google Analytics 可以跟踪由 Google Ads 广告活动带来的流量。
+- **活动（Campaigns）**：跟踪用户发现网站的特定方式。比如，Google Analytics 可以跟踪由 Google Ads 广告活动带来的流量。
 
-- 页面浏览量（Pageviews）– 选定的日期范围内访问者浏览网站的页面总数。
+- **页面浏览量（Pageviews）**：选定的日期范围内访问者浏览网站的页面总数。
 
-- 跳出率（Bounce Rate）– 选定的日期范围内，用户只访问了网站上的一个页面，没有其他交互操作就退出访问的会话的百分比。
+- **跳出率（Bounce Rate）**：选定的日期范围内，用户只访问了网站上的一个页面，没有其他交互操作就退出访问的会话的百分比。
 
-- 受众（Audiences）- 自定义的用户组。创建这些用户组，以帮助在谷歌分析报告、重新营销工作、谷歌广告活动和其他谷歌网站管理员工具中识别特定类型的用户。
+- **受众（Audiences）**：自定义的用户组。创建这些用户组，以帮助在谷歌分析报告、重新营销工作、谷歌广告活动和其他谷歌网站管理员工具中识别特定类型的用户。
 
-- 转化和目标（Conversions & Goals）- 可以把用户某个交互行为定义为目标，以衡量业务价值。比如，用户完成在线购买或查看联系方式页面。转化表示网站用户完成已定义目标的次数。
+- **转化和目标（Conversions & Goals）**：可以把用户某个交互行为定义为目标，以衡量业务价值。比如，用户完成在线购买或查看联系方式页面。转化表示网站用户完成已定义目标的次数。
 
-- 漏斗（Funnels）— 用户完成设定目标经过的路径。
+- **漏斗（Funnels）**：用户完成设定目标经过的路径。
 
 > 以上提到的常用词汇，先有个大概印象即可，没必要把这些都背下来。
 > 
@@ -132,12 +132,11 @@ Google 于 2022 年 3 月 16 日宣布，将以新一代的成效评估解决方
 只需要将该代码添加到 `<head></head>` 中即可。
 
 
-
 ## 百度统计
 
 > 官网：https://tongji.baidu.com/web/welcome/login
 
-![](https://tongji.baidu.com/web5/image/logo.png?__v=1664186255948)
+![百度统计图标](https://tongji.baidu.com/web5/image/logo.png?__v=1664186255948)
 
 ## 参考
 

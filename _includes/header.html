@@ -18,6 +18,9 @@
   {% if site.prism == true %}
   <link rel="stylesheet" href="{{ assets_base_url }}/assets/vendor/prism/css/prism.css">
   {% endif %}
+  {% if site.fancybox == true and page.layout == 'post' %}
+  <link rel="stylesheet" href="{{ assets_base_url }}/assets/vendor/fancybox/css/fancybox.css">
+  {% endif %}
   {% assign highlight_base_url = 'https://mazhuang.org/rouge-themes/dist' %}
   {% if site.cdn.jsdelivr.enabled %}
   {% assign highlight_base_url = 'https://cdn.jsdelivr.net/gh/mzlogin/rouge-themes@master/dist' %}
@@ -87,24 +90,97 @@
   <!-- prism 代码高亮、显示行号 -->
   {% if site.prism == true %}
   <script>
-      window.Prism = window.Prism || {};
-      window.Prism.manual = false;
+    window.Prism = window.Prism || {};
+    window.Prism.manual = false;
   </script>
   <script src="{{ assets_base_url }}/assets/vendor/prism/js/prism.js"></script>
   <meta name="referrer" content="no-referrer-when-downgrade">
+  {% endif %}
+  <!-- FancyBox -->
+  {% if site.fancybox == true and page.layout == 'post' %}
+  <script src="{{ assets_base_url }}/assets/vendor/fancybox/js/fancybox.umd.js"></script>
   {% endif %}
 
   <!-- prism 代码高亮、显示行号 -->
   {% if site.prism == true %}
   <!-- line number for code block -->
   <script>
+    function prismCodeNumbers() {
       var pres = document.getElementsByTagName("pre");
+      console.log("pres length: ", pres.length);
       for (var i = 0; i < pres.length; i++) {
           var pre = pres[i];
           if (pre.childNodes[0].nodeName == "CODE") {
               pre.setAttribute("class", "line-numbers");
           }
       }
+    }
+    $(document).ready(function() {
+      prismCodeNumbers();
+    });
+  </script>
+  {% endif %}
+
+  <!-- FancyBox 图片查看 -->
+  {% if site.fancybox == true and page.layout == 'post' %}
+  <script>
+    function wrapImageWithFancyBox() {
+      $('img').not('.sidebar-image img').not('#author-avatar img').not(".mdl-menu img").not(".something-else-logo img").each(function() {
+          var $image = $(this);
+          var imageCaption = $image.attr('alt');
+          var $imageWrapLink = $image.parent('a');
+
+          if ($imageWrapLink.size() < 1) {
+            var src = this.getAttribute('src');
+            var idx = src.lastIndexOf('?');
+            if (idx != -1) {
+                src = src.substring(0, idx);
+            }
+            $imageWrapLink = $image.wrap('<a href="' + src + '"></a>').parent('a');
+          }
+
+          $imageWrapLink.attr('data-fancybox', 'images');
+          if (imageCaption) {
+              $imageWrapLink.attr('data-caption', imageCaption);
+          }
+      });
+
+      Fancybox.bind("[data-fancybox]", {
+          selector: '[data-fancybox="images"]',
+          thumbs: true,
+          hash: true,
+          loop: false,
+          fullScreen: false,
+          slideShow: false,
+          showClass: false,
+          hideClass: false,
+          protect: true,
+          Image: {
+            zoom: true,
+          },
+          closeButton: "top",
+          Toolbar: {
+            display: [
+              {
+              id: "counter",
+              position: "center",
+              },
+              "fullscreen",
+              "thumbs",
+              "close",
+            ]
+          },
+          Thumbs: {
+            Carousel: {
+              fill: false,
+              center: true,
+            },
+          },
+      });
+    }
+    $(document).ready(function() {
+      wrapImageWithFancyBox();
+    });
   </script>
   {% endif %}
 
@@ -113,7 +189,7 @@
     crossorigin="anonymous"></script>
   {% endif %}
 
-  {% if site.google.analytics_id %}
+  {% if site.google.analytics_id and site.url contains 'bookstall.github.io' %}
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google.analytics_id }}"></script>
   <script>
@@ -124,7 +200,7 @@
   </script>
   {% endif %}
 
-  {% if site.baidu.analytics_id %}
+  {% if site.baidu.analytics_id and site.url contains 'bookstall.github.io' %}
   <!-- Baidu Analytics -->
   <script>
     var _hmt = _hmt || [];
