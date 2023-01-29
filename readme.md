@@ -1,5 +1,7 @@
 # Bookstall's Blog
 
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&width=435&lines=Welcome+To+Bookstall's+Blog)](https://git.io/typing-svg)
+
 我的个人博客：<https://bookstall.github.io/>，欢迎 Star 和 Fork。
 
 ## 概览

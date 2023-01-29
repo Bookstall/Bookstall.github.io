@@ -6,6 +6,7 @@ categories: [Blog]
 description: Add Music Player In Blog
 keywords: Music Player, Blog, Jekyll
 title: 在 Jekyll 博客中添加音乐播放器
+mathjax: true
 ---
 
 ## 网易云音乐插件
