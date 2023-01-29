@@ -79,6 +79,10 @@ navs:
     label: 归档
 
   -
+    href: /fragments/
+    label: 片段
+
+  -
     href: /open-source/
     label: 开源
 

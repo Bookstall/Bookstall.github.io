@@ -23,8 +23,10 @@
   {% if site.prism == true %}
   <link rel="stylesheet" href="{{ assets_base_url }}/assets/vendor/prism/css/prism.css">
   {% endif %}
-  {% if site.fancybox == true and page.layout == 'post' %}
+  {% if site.fancybox == true %}
+  {% if page.layout == 'post' or page.layout == 'fragment' %}
   <link rel="stylesheet" href="{{ assets_base_url }}/assets/vendor/fancybox/css/fancybox.css">
+  {% endif %}
   {% endif %}
   {% assign highlight_base_url = 'https://mazhuang.org/rouge-themes/dist' %}
   {% if site.cdn.jsdelivr.enabled %}
@@ -104,8 +106,10 @@
   {% endif %}
 
   <!-- FancyBox -->
-  {% if site.fancybox == true and page.layout == 'post' %}
+  {% if site.fancybox == true %}
+  {% if page.layout == 'post' or page.layout == 'fragment' %}
   <script src="{{ assets_base_url }}/assets/vendor/fancybox/js/fancybox.umd.js"></script>
+  {% endif %}
   {% endif %}
 
   <!-- prism 代码高亮、显示行号 -->
@@ -128,7 +132,8 @@
   {% endif %}
 
   <!-- FancyBox 图片查看 -->
-  {% if site.fancybox == true and page.layout == 'post' %}
+  {% if site.fancybox == true %}
+  {% if page.layout == 'post' or page.layout == 'fragment' %}
   <script>
     function wrapImageWithFancyBox() {
       $('img').not('.sidebar-image img').not('#author-avatar img').not(".mdl-menu img").not(".something-else-logo img").each(function () {
@@ -188,6 +193,7 @@
       wrapImageWithFancyBox();
     });
   </script>
+  {% endif %}
   {% endif %}
 
   {% if site.url contains 'bookstall.github.io' %}
