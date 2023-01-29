@@ -5,6 +5,11 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <!-- 解决图片403防盗链问题 -->
+  <!-- meta name="referrer" content="no-referrer" / -->
+  <!-- 控制搜索引擎爬行和索引的行为 -->
+  <meta name="robots" content="index,follow,noodp"><!-- 所有搜索引擎 -->
+  <meta name="googlebot" content="index,follow"><!-- 谷歌 -->
   <title>{% if page.title %}{{ page.title }} &mdash; {% endif %}{{ site.title }}</title>
   <link rel="stylesheet" href="{{ assets_base_url }}/assets/vendor/primer-css/css/primer.css">
   <link rel="stylesheet" href="{{ assets_base_url }}/assets/css/components/collection.css">
@@ -86,7 +91,9 @@
   <!-- busuanzi 统计 -->
   {% if site.components.busuanzi.enabled == true and page.visit-stat != 'hidden' and page.layout != 'mindmap' %}
   <script async src="{{ assets_base_url }}/assets/vendor/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <meta name="referrer" content="no-referrer-when-downgrade">
   {% endif %}
+
   <!-- prism 代码高亮、显示行号 -->
   {% if site.prism == true %}
   <script>
@@ -94,8 +101,8 @@
     window.Prism.manual = false;
   </script>
   <script src="{{ assets_base_url }}/assets/vendor/prism/js/prism.js"></script>
-  <meta name="referrer" content="no-referrer-when-downgrade">
   {% endif %}
+
   <!-- FancyBox -->
   {% if site.fancybox == true and page.layout == 'post' %}
   <script src="{{ assets_base_url }}/assets/vendor/fancybox/js/fancybox.umd.js"></script>
@@ -108,13 +115,13 @@
     function prismCodeNumbers() {
       var pres = document.getElementsByTagName("pre");
       for (var i = 0; i < pres.length; i++) {
-          var pre = pres[i];
-          if (pre.childNodes[0].nodeName == "CODE") {
-              pre.setAttribute("class", "line-numbers");
-          }
+        var pre = pres[i];
+        if (pre.childNodes[0].nodeName == "CODE") {
+          pre.setAttribute("class", "line-numbers");
+        }
       }
     }
-    $(document).ready(function() {
+    $(document).ready(function () {
       prismCodeNumbers();
     });
   </script>
@@ -124,60 +131,60 @@
   {% if site.fancybox == true and page.layout == 'post' %}
   <script>
     function wrapImageWithFancyBox() {
-      $('img').not('.sidebar-image img').not('#author-avatar img').not(".mdl-menu img").not(".something-else-logo img").each(function() {
-          var $image = $(this);
-          var imageCaption = $image.attr('alt');
-          var $imageWrapLink = $image.parent('a');
+      $('img').not('.sidebar-image img').not('#author-avatar img').not(".mdl-menu img").not(".something-else-logo img").each(function () {
+        var $image = $(this);
+        var imageCaption = $image.attr('alt');
+        var $imageWrapLink = $image.parent('a');
 
-          if ($imageWrapLink.size() < 1) {
-            var src = this.getAttribute('src');
-            var idx = src.lastIndexOf('?');
-            if (idx != -1) {
-                src = src.substring(0, idx);
-            }
-            $imageWrapLink = $image.wrap('<a href="' + src + '"></a>').parent('a');
+        if ($imageWrapLink.size() < 1) {
+          var src = this.getAttribute('src');
+          var idx = src.lastIndexOf('?');
+          if (idx != -1) {
+            src = src.substring(0, idx);
           }
+          $imageWrapLink = $image.wrap('<a href="' + src + '"></a>').parent('a');
+        }
 
-          $imageWrapLink.attr('data-fancybox', 'images');
-          if (imageCaption) {
-              $imageWrapLink.attr('data-caption', imageCaption);
-          }
+        $imageWrapLink.attr('data-fancybox', 'images');
+        if (imageCaption) {
+          $imageWrapLink.attr('data-caption', imageCaption);
+        }
       });
 
       Fancybox.bind("[data-fancybox]", {
-          selector: '[data-fancybox="images"]',
-          thumbs: true,
-          hash: true,
-          loop: false,
-          fullScreen: false,
-          slideShow: false,
-          showClass: false,
-          hideClass: false,
-          protect: true,
-          Image: {
-            zoom: true,
-          },
-          closeButton: "top",
-          Toolbar: {
-            display: [
-              {
+        selector: '[data-fancybox="images"]',
+        thumbs: true,
+        hash: true,
+        loop: false,
+        fullScreen: false,
+        slideShow: false,
+        showClass: false,
+        hideClass: false,
+        protect: true,
+        Image: {
+          zoom: true,
+        },
+        closeButton: "top",
+        Toolbar: {
+          display: [
+            {
               id: "counter",
               position: "center",
-              },
-              "fullscreen",
-              "thumbs",
-              "close",
-            ]
-          },
-          Thumbs: {
-            Carousel: {
-              fill: false,
-              center: true,
             },
+            "fullscreen",
+            "thumbs",
+            "close",
+          ]
+        },
+        Thumbs: {
+          Carousel: {
+            fill: false,
+            center: true,
           },
+        },
       });
     }
-    $(document).ready(function() {
+    $(document).ready(function () {
       wrapImageWithFancyBox();
     });
   </script>
@@ -206,10 +213,10 @@
     (function () {
       var hm = document.createElement("script");
       var analytics_id = '{{ site.baidu.analytics_id }}';
-    hm.src = ['ht', 't', 'ps', ':/', '/h', 'm', '.b', 'a', 'i', 'd', 'u.c', 'o', 'm/', 'h', 'm.', 'j', 's?', analytics_id].join('');
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(hm, s);
-    }) ();
+      hm.src = ['ht', 't', 'ps', ':/', '/h', 'm', '.b', 'a', 'i', 'd', 'u.c', 'o', 'm/', 'h', 'm.', 'j', 's?', analytics_id].join('');
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
   </script>
   {% endif %}
 
