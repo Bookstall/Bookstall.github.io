@@ -4,12 +4,14 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <!-- 网站页面自适应 -->
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
   <!-- 解决图片403防盗链问题 -->
   <!-- meta name="referrer" content="no-referrer" / -->
   <!-- 控制搜索引擎爬行和索引的行为 -->
   <meta name="robots" content="index,follow,noodp"><!-- 所有搜索引擎 -->
   <meta name="googlebot" content="index,follow"><!-- 谷歌 -->
+  <meta name="baiduspider" content="index,follow" /><!-- 百度 -->
   <title>{% if page.title %}{{ page.title }} &mdash; {% endif %}{{ site.title }}</title>
   <link rel="stylesheet" href="{{ assets_base_url }}/assets/vendor/primer-css/css/primer.css">
   <link rel="stylesheet" href="{{ assets_base_url }}/assets/css/components/collection.css">
