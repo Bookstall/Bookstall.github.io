@@ -16,6 +16,7 @@ permalink: /fragments/
 {% for item in site.fragments %}
 {% if item.title != "Fragment Template" %}
 <li class="listing-item" tags="{% for tag in item.tags %}{{ tag }} {% endfor %}">
+  <span class="posts-list-meta">{{ item.date | date:"%Y-%m-%d" }}</span>
   <a href="{{ site.url }}{{ item.url }}">{{ item.title }}</a>
   {% for tag in item.tags %}
   <a style="font-size:12px;color:gray;font-style:italic;display:inline-block;margin:0 0 0 4px;padding:0 4px;background-color:lightgray;" href="{{ site.url }}/fragments/?tag={{ tag }}" title="{{ tag }}">{{ tag }}</a>
@@ -39,6 +40,7 @@ jQuery(function() {
     }
 
     $(".listing-item").each(function() {
+        tag = decodeURIComponent(tag);
         if ($(this).attr('tags').indexOf(tag) < 0) {
             $(this).css('display', 'none');
         }

@@ -37,11 +37,11 @@
 .posts-list {
     line-height: 2;
     color: #555;
-    list-style-type:disc;
+    list-style-type: disc;
 }
 
 .posts-list::before {
-/*    content: " ";*/
+    /*    content: " ";*/
     position: absolute;
     left: 0;
     top: 12px;
@@ -122,4 +122,10 @@
     vertical-align: middle;
     background-color: #777;
     border-radius: 10px;
+}
+
+.listing-item {
+    margin: 5px 0;
+    border-bottom: 1px dashed #ccc;
+    padding: 0;
 }
