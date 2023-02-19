@@ -12,9 +12,9 @@ mathjax: true
 
 ## 2023-02-07
 
-2 月 7 日，百度公司向澎湃科技（www.thepaper.cn）确认，此前流传的类 ChatGPT 聊天机器人项目名字确定为 “文心一言”，英文名ERNIE Bot，3 月完成内测，面向公众开放。
+2 月 7 日，百度公司向澎湃科技（www.thepaper.cn）确认，此前流传的类 ChatGPT 聊天机器人项目名字确定为 “文心一言”，英文名 ERNIE Bot，3 月完成内测，面向公众开放。
 
-![百度的官宣推文](https://imagecloud.thepaper.cn/thepaper/image/237/381/426.jpeg)
+![百度的官宣推文](https://pic1.xuehuaimg.com/proxy/https://imagecloud.thepaper.cn/thepaper/image/237/381/426.jpeg)
 
 > 来源：[澎湃新闻：百度即将上线聊天机器人“文心一言”， 3月完成内测](https://www.thepaper.cn/newsDetail_forward_21828906)
 
@@ -348,7 +348,7 @@ mathjax: true
 
 ## 2023-02-16
 
-### OpenAI 买下极品域名 AI.com，链接跳转到 ChatGPT
+### OpenAI 买下极品域名 AI.com
 
 2 月 16 日消息，人工智能聊天机器人 ChatGPT 近日火爆全球，该技术的开发商 OpenAI 豪掷千金，将超优质域名 **AI.com** 链接跳转到了 **ChatGPT**。访问 [AI.com](https://ai.com/) 发现，OpenAI 将该域名链接到了 [ChatGPT 的官网](chat.openai.com)，用户直接在浏览器输入 AI.com 即可跳转。
 
@@ -432,7 +432,7 @@ Image：
 
 ## 2023-02-18
 
-### 香港大学宣布禁用 ChatGPT 等 AI 工具
+### 香港大学：禁用 ChatGPT 等 AI 工具
 
 2 月 18 日消息，香港大学禁止师生使用人工智能机器人 ChatGPT 或其他人工智能工具完成课程作业、评估等，**为全港大学中首例**。
 
