@@ -27,7 +27,7 @@
   <link rel="stylesheet" href="{{ assets_base_url }}/assets/vendor/prism/css/prism.css">
   {% endif %}
   {% if site.fancybox == true %}
-  {% if page.layout == 'post' or page.layout == 'fragment' %}
+  {% if page.layout == 'post' or page.layout == 'fragment' or page.layout == 'wiki' %}
   <link rel="stylesheet" href="{{ assets_base_url }}/assets/vendor/fancybox/css/fancybox.css">
   {% endif %}
   {% endif %}
@@ -110,7 +110,7 @@
 
   <!-- FancyBox -->
   {% if site.fancybox == true %}
-  {% if page.layout == 'post' or page.layout == 'fragment' %}
+  {% if page.layout == 'post' or page.layout == 'fragment' or page.layout == 'wiki' %}
   <script src="{{ assets_base_url }}/assets/vendor/fancybox/js/fancybox.umd.js"></script>
   {% endif %}
   {% endif %}
@@ -136,7 +136,7 @@
 
   <!-- FancyBox 图片查看 -->
   {% if site.fancybox == true %}
-  {% if page.layout == 'post' or page.layout == 'fragment' %}
+  {% if page.layout == 'post' or page.layout == 'fragment' or page.layout == 'wiki' %}
   <script>
     function wrapImageWithFancyBox() {
       $('img').not('.sidebar-image img').not('#author-avatar img').not(".mdl-menu img").not(".something-else-logo img").each(function () {

@@ -1,6 +1,6 @@
 ---
 layout: fragment
-title: 清除 JsDelive 缓存
+title: 清除 JsDelivr 缓存
 tags: [前端, CDN]
 description: some word here
 keywords: 前端, CDN
@@ -18,7 +18,7 @@ JsDelivr 提供的全球 CDN 加速，CDN 的分流作用不仅减少了用户�
 
 
 
-## 清除 JsDelive 缓存
+## 清除 JsDelivr 缓存
 
 对于 JsDelivr，缓存刷新的方式也很简单，只需将想刷新的链接的开头的 `cdn` 更改为 `purge`，即将
 
@@ -26,7 +26,7 @@ JsDelivr 提供的全球 CDN 加速，CDN 的分流作用不仅减少了用户�
 
 切换为 
 
-`https://purge.jsdelivr.net/`。
+`https://purge.jsdelivr.net/`
 
 
 示例接口：https://purge.jsdelivr.net/gh/Bookstall/Bookstall.github.io@main/assets/vendor/prism/js/prism.js
@@ -63,9 +63,9 @@ JsDelivr 提供的全球 CDN 加速，CDN 的分流作用不仅减少了用户�
 
 - [JsDelivr 文档：Purge cache](https://www.jsdelivr.com/documentation#id-purge-cache)
 
-- [jsdelivr CDN 使用和缓存刷新 _](https://www.cnblogs.com/UncleZhao/p/13753723.html)
+- [jsdelivr CDN 使用和缓存刷新](https://www.cnblogs.com/UncleZhao/p/13753723.html)
 
-- [Jsdelivr CDN 缓存清除工具 |缓存刷新|缓存更新|免费CDN](https://www.tgee.cn/jsdelivr-cdn.html)
+- [Jsdelivr CDN 缓存清除工具](https://www.tgee.cn/jsdelivr-cdn.html)
 
 - [一个帮你实时刷新jsdelivr CDN缓存的小工具](https://segmentfault.com/a/1190000025179613)
 

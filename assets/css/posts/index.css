@@ -125,7 +125,42 @@
 }
 
 .listing-item {
-    margin: 5px 0;
+    margin: 10px 0;
     border-bottom: 1px dashed #ccc;
     padding: 0;
+}
+
+.pre_next {
+    margin-top: 1em;
+    padding-top: 1em;
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+    border-top: 1px solid #f2f3f3;
+    float: left;
+    width: 100%;
+}
+
+.pre_next a {
+    display: block;
+    padding: 1em 2em;
+    float: left;
+    width: 50%;
+    text-align: center;
+    color: #898c8f;
+    border: 1px solid #b6b6b6;
+    border-radius: 4px;
+    /* 不显示下划线 */
+    text-decoration: none;
+    /* 文本截断，超过使用 "..." 表示 */
+    max-width: 50%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.pre_next a:hover {
+    background-color: #898c8f;
+    color: #fff;
+    /* 文本截断，超过使用 "..." 表示 */
+    /* white-space: normal; */
 }

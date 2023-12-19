@@ -17,7 +17,7 @@ repository: Bookstall/Bookstall.github.io
 # 对 css 和 js 资源的 cdn 加速配置
 cdn:
     jsdelivr:
-        enabled: true
+        enabled: false
 # 可选组件配置
 components:
     # 分享
@@ -83,12 +83,13 @@ navs:
     label: 片段
 
   -
+    href: /wiki/
+    label: 维基
+
+  -
     href: /open-source/
     label: 开源
 
-#   -
-#     href: /wiki/
-#     label: 维基
 
 #   -
 #     href: /links/
@@ -127,6 +128,10 @@ plugins:
     - jemoji
 #     - jekyll-mentions
 collections:
+    # "上一篇"、"下一篇"功能
+    post:
+        output: true
+        permalink: /posts/:year/:month/:day/:title/
     wiki:
         output: true
         permalink: /wiki/:path/

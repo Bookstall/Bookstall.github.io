@@ -72,8 +72,13 @@
 {% endif %}
 
 {% if page.mathjax %}
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        TeX: {equationNumbers: {autoNumber: "AMS"}},
+    });
+</script>
 <script type="text/javascript"
-    src="https://cdn.jsdelivr.net/gh/mathjax/MathJax@2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    src="https://cdn.jsdelivr.net/gh/mathjax/MathJax@2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 {% endif %}
 
 {% if page.mindmap %}

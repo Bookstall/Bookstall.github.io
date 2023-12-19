@@ -24,6 +24,7 @@ layout: default
               <a href="{{ site.url }}/categories/#{{ cat }}" title="{{ cat }}">{{ cat }}</a>
             </span>
             {% endfor %}
+            <!-- 字数统计 -->
             {% if site.components.word_count.enabled %}
             <span class="meta-info">
               <span class="octicon octicon-clock"></span>
@@ -33,7 +34,8 @@ layout: default
             {% endif %}
             <!-- 阅读量统计 -->
             <span class="meta-info">
-              {% if site.components.busuanzi.enabled == true and page.visit-stat != 'hidden' and page.layout != 'mindmap' %}
+              {% if site.components.busuanzi.enabled == true and page.visit-stat != 'hidden' and page.layout !=
+              'mindmap' %}
               {% include reading-stat.html %}
               {% endif %}
             </span>
@@ -57,6 +59,15 @@ layout: default
         {{ content }}
         {% include copyright.html %}
       </article>
+      <!-- 上一篇、下一篇 -->
+      <div class="pre_next">
+        {% if page.previous %}
+        <a href="{{ page.previous.url }}" title="{{ page.previous.title }}"> 上一篇：{{ page.previous.title }}</a>
+        {% endif %}
+        {% if page.next %}
+        <a href="{{ page.next.url }}" title="{{ page.next.title }}">下一篇：{{ page.next.title }}</a>
+        {% endif %}
+      </div>
       <div class="share">
         {% include sns-share.html %}
       </div>

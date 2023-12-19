@@ -312,6 +312,7 @@ RuntimeError: imageio.ffmpeg.download() has been deprecated. Use 'pip install im
 
 - [srt's github](https://github.com/cdown/srt)
 
+- 基于 Whisper 的开源应用程序：[buzz](https://github.com/chidiwilliams/buzz)
 
 
 ## 参考

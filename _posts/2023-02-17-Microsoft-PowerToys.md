@@ -244,6 +244,26 @@ PowerToys Run 可帮助你 **立即搜索和启动应用**。 如需打开，可
 </video>
 
 
+## 更新
+
+### PowerToys 0.68.0 版本
+
+3 月 2 日消息，微软 Win10 / Win11 官方优化工具 PowerToys 于今天发布了 0.68.0 版本更新，本次更新修复了此前版本中用户反馈的问题，并引入了 **粘贴为纯文本（Paste as Plain Text）** 和 **Mouse Jump** 两项功能。
+
+- Paste as Plain Text：允许用户以 **纯文本格式**，粘贴剪贴板中未格式化的文本内容
+
+  - 注意：剪贴板中的格式化文本将替换为未格式化的文本
+
+- Mouse Jump：允许在单个屏幕或多个屏幕上 **长距离快速移动鼠标指针**
+
+![PowerToys 0.68.0 版本更新](https://img.ithome.com/newsuploadfiles/2023/3/4d79aeee-5eba-4488-92cf-77d9ee00a734.jpg?x-bce-process=image/format,f_auto)
+
+
+
+
+
+
+
 ## 参考
 
 - [PowerToys repo](https://github.com/microsoft/PowerToys)
@@ -252,3 +272,4 @@ PowerToys Run 可帮助你 **立即搜索和启动应用**。 如需打开，可
 
 - 维基百科：[Microsoft PowerToys](https://zh.wikipedia.org/zh-cn/Microsoft_PowerToys)
 
+- IT 之家：[微软 Win10 / Win11 官方优化工具 PowerToys 0.68.0 发布：引入以纯文本粘贴和 Mouse Jump 功能](https://www.ithome.com/0/676/826.htm)

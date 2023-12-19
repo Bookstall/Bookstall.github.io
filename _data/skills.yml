@@ -10,10 +10,11 @@
       - Android
       - Reverse Engineering
 
-- name: Windows Developer Keywords
+- name: Artificial Intelligence
   keywords:
-      - Win32 SDK
-      - DuiLib
-      - WTL
-      - COM
-      - WinDbg
+      - PyTorch
+      - Computer Vision
+      - Temporal Video Grounding
+
+
+
