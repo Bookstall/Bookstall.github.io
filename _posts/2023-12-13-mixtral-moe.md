@@ -95,6 +95,41 @@ sticky: true
 ![](https://www.qbitai.com/wp-content/uploads/replace/7c58b85668550b59ceb1d16821689455.png)
 
 
+## 更新：Mixtral-8x7B 论文发表
+
+论文 [Mixtral of Experts](https://arxiv.org/abs/2401.04088) 已经发表在 Arxiv 上。详细的论文解决可以参见 [一条磁力链爆全网，Mixtral 8x7B 论文来了！碾压 Llama 2 70B，每 token 仅需激活 13B 参数](https://cloud.tencent.com/developer/article/2378650)。
+
+
+![模型的结构细节](https://developer.qcloudimg.com/http-save/yehe-1366542/45315a769b798519ecc296e9a74e3b8f.png)
+
+
+---
+
+研究人员对路由器如何选择「专家」进行了简要分析。特别是在训练期间，是否会有「专家」选择专攻某些特定的领域（如数学、生物学、哲学等）。为了探究这一点，研究人员对 The Pile 验证数据集的不同子集进行了「专家」选择分布的测量，结果如下图所示。涉及模型的第 0 层、第 15 层和第 31 层（最后一层）。
+
+出乎意料的是，这里并 **没有发现明显的基于主题分配「专家」的模式**。比如，在所有层中，无论是 arXiv 论文（用 LaTeX 编写）、生物学领域（PubMed 摘要）还是哲学领域（PhilPapers 文件），「专家」的分配分布都非常相似。只有在数学领域（DM Mathematics）中，「专家」的分布略有不同，专家 0 和专家 2 分配的 token 比较多。
+
+研究人员认为，这种差异可能是因为数据集本身是合成的，且对自然语言的覆盖上有限，尤其是在模型的第一层和最后一层，隐藏状态分别与输入和输出嵌入高度相关。而这也表明，路由器确实表现出了一些结构化的句法行为。
+
+> 各个专家分配的 **“比较均匀”**
+
+![](https://developer.qcloudimg.com/http-save/yehe-1366542/98086d174a2b4420ffc13d895a644e2e.png)
+
+
+---
+
+下图展示了不同领域（Python 代码、数学和英语）的文本示例。其中，每个 token 都用不同的背景色标注，便于查看对应分配到的「专家」。
+
+![token 文本被分配的专家分布图](https://developer.qcloudimg.com/http-save/yehe-1366542/b079e30d614066d44637aefbfb9c5d94.png)
+
+可以发现，像 Python 中的「self」和英文中的「Question」这样的词语，虽然包含有多个 token，但往往被分配给同一个「专家」。同样，相邻的 token 也会被分配给同一位「专家」。
+
+在代码中，缩进的 token 也总是被指派给相同的「专家」，这一点在模型的第一层和最后一层尤为显著，因为这些层的隐藏状态与模型的输入和输出更加紧密相关。此外，在 The Pile 数据集上，研究人员还发现了一些位置上的 **邻近性（positional locality）**。也就是说，**连续的标记通常被分配给相同的专家**。
+
+
+
+
+
 ## 参考
 
 - 量子位：
@@ -124,3 +159,4 @@ sticky: true
 
   - 代码：https://github.com/mistralai/mistral-src
 
+  - 论文：[Mixtral of Experts](https://arxiv.org/abs/2401.04088)

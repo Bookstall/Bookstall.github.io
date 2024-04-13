@@ -58,7 +58,7 @@ sticky: true
 
 - Triton FlashAttention 在 Hopper-Triton PR 之后，目前 main 分支已经集成了大量的 Hopper 相关的优化 Pass，相比官方库还没有稳定实现 Hopper features 来说，在某些 problem size 下可能有优势。
 
-- 关于Triton推荐阅读：[杨军：谈谈对 OpenAI Triton 的一些理解](https://zhuanlan.zhihu.com/p/613244988)，[杨军：OpenAI Triton Conference 参会随感兼谈 Triton Hopper](https://zhuanlan.zhihu.com/p/659348024)
+- 关于 Triton 推荐阅读：[杨军：谈谈对 OpenAI Triton 的一些理解](https://zhuanlan.zhihu.com/p/613244988)，[杨军：OpenAI Triton Conference 参会随感兼谈 Triton Hopper](https://zhuanlan.zhihu.com/p/659348024)
 
 
 ## 2、背景
@@ -101,9 +101,9 @@ Flash Attention 在做的事情，其实都包含在它的命名中了（**Fast 
 
 我们知道，**在执行运算的过程中，时间不仅花在计算本身上，也花在数据读取存储上**，所以现在我们定义：
 
-- $$T_{cal}$$ ：对某个算法而言，计算所耗费的时间，单位为 s，下标 cal 表示 calculate。其满足 $$T_{cal} =\frac{\pi_{t}}{\pi}$$
+- $$T_{cal}$$：对某个算法而言，计算所耗费的时间，单位为 s，下标 cal 表示 calculate。其满足 $$T_{cal} =\frac{\pi_{t}}{\pi}$$
 
-- $$T_{load}$$ ：对某个算法而言，读取存储数据所耗费的时间，单位为 s。其满足 $$T_{load} = \frac{\beta_{t}}{\beta}$$
+- $$T_{load}$$：对某个算法而言，读取存储数据所耗费的时间，单位为 s。其满足 $$T_{load} = \frac{\beta_{t}}{\beta}$$
 
 我们知道，数据在读取的同时，可以计算；在计算的同时也可以读取，所以我们有：
 
@@ -183,7 +183,14 @@ Roof-line 模型就是为了解答这一问题而提出的，它能直观帮我�
 
 ### 3.1、Forward 过程
 
-待更
+TODO 待更
+
+#### 1）普通 Softmax
+
+#### 2）安全 Softmax
+
+#### 3）Online Softmax
+
 
 #### 4）Kernel 融合
 
@@ -196,7 +203,7 @@ Roof-line 模型就是为了解答这一问题而提出的，它能直观帮我�
 
 ### 3.2、Backward 过程
 
-待更
+TODO 待更
 
 
 
