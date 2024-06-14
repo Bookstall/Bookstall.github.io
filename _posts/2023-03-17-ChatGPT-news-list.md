@@ -849,6 +849,125 @@ ChatGPT 融入 Microsoft Office 全家桶。
 
 
 
+- Google：Gemma、CodeGemma
+
+![](https://pica.zhimg.com/v2-9334dda21252ffda22874eecbf5fe4b6_r.webp?source=172ae18b&consumer=ZHI_MENG)
+
+- 360 开源：开源模型中最大的上下文【7B】
+
+  - https://github.com/Qihoo360/360zhinao/
+
+  - https://huggingface.co/qihoo360/360Zhinao-7B-Chat-360K
+
+
+- JetMoE：Reaching LLaMA2 Performance with 0.1M Dollars【8B】
+  
+  - https://github.com/myshell-ai/JetMoE
+
+  - https://huggingface.co/jetmoe/jetmoe-8b
+
+  - https://research.myshell.ai/jetmoe
+
+- Google：Mixture-of-Depths（MOD）
+
+  - 改变了以往 Transformer 的计算模式【可以实现 **动态分配计算**】
+
+  - [Mixture-of-Depths: Dynamically allocating compute in transformer-based language models](https://arxiv.org/abs/2404.02258)
+
+- Google：Infini-Transformer
+
+  - Infini-Transformer 引入了一种有效的方法，可以将基于 Transformer 的大型语言模型 (LLM) 扩展到无限长输入，而不增加内存和计算需求。
+
+  - 在有限的内存中，将 Transformer LLM 扩展到无限长的上下文
+
+  - [Leave No Context Behind: Efficient Infinite Context Transformers with Infini-attention](https://arxiv.org/abs/2404.07143)
+
+- 多模态模型 Mini-Gemini【开源，香港中文大学】
+
+  - 识图、推理、**生图** 一站解决【融合 ChatGPT + DALLE·3】
+
+  - [Demo 地址](http://103.170.5.190:7860/)
+
+  - [Github 地址](https://github.com/dvlab-research/MiniGemini)
+
+  - [Mini-Gemini: Mining the Potential of Multi-modality Vision Language Models](https://arxiv.org/abs/2403.18814)
+
+
+
+[Real-ESRGAN](https://github.com/xinntao/Real-ESRGAN)
+
+Real-ESRGAN 是一个旨在开发实用的图像/视频恢复算法的项目。该项目主要功能、关键特性和核心优势包括：
+
+- 提供动漫视频小模型和动漫插图模型
+
+- 支持在线 Colab 演示和便携式 Windows/Linux/MacOS 可执行文件
+
+- 实现了对真实世界盲目超分辨率训练，支持纯合成数据微调
+
+- 集成了 GFPGAN 以支持面部增强功能
+
+- 提供详细的训练指南，并发布了训练代码
+
+![Real-ESRGAN 效果图](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b75a4eff32414c1fb3f1e0750fcc11e1~tplv-k3u1fbpfcp-jj-mark:3024:0:0:0:q75.awebp#?w=1844&h=870&s=405152&e=jpg&b=efdfcf)
+
+
+中国电信：TeleChat 星辰语义大模型
+
+  - github：https://github.com/Tele-AI/Telechat
+
+  - TeleChat-1B（1.10）
+
+  - TeleChat-12B（4.16）
+
+
+
+Ollama
+
+> 参考：[一分钱不花！本地部署 Google 最强开源 AI 大模型 Gemma 教程](https://www.zhihu.com/tardis/zm/art/687311476)
+
+[Ollama](https://github.com/ollama/ollama) 是一个专为运行、创建和分享大型语言模型而设计的开源项目，为开发者和研究者提供了一个平台，使得他们可以更方便地 **部署、管理和使用** 这些大型语言模型。目前 Ollama 支持支持 macOS、Windows、Linux 和 Docker 等多种安装方式，还能通过 API 方式为本地 AI 服务提供便捷途径。
+
+目前 Ollama 支持的模型如下图所示：
+
+![](https://pic2.zhimg.com/v2-53f42cd49fe8a3884e12f5cb34227839_b.webp?consumer=ZHI_MENG)
+
+
+Llama 3
+
+- 机器之心：[开源大模型 Llama 3 王者归来！最大底牌 4000 亿参数，性能直逼 GPT-4](https://www.jiqizhixin.com/articles/2024-04-19)
+
+- Github：[llama3](https://github.com/meta-llama/llama3)
+
+Llama-Chinese
+
+- Github：[Llama-Chinese](https://github.com/LlamaFamily/Llama-Chinese)
+
+Idefics2
+
+  - Huggingface 最强开源视觉模型
+
+  - 80 亿参数突破多模态关键技术
+
+  - https://huggingface.co/HuggingFaceM4/idefics2-8b
+
+  - Idefics2 已经在 HuggingFace 的 `Transformers` 库中集成，便于开发者进行后续的细分任务微调
+
+Qwen1.5-110B
+
+- 开源 Qwen1.5 系列首个千亿参数模型 Qwen1.5-110B
+
+- Qwen1.5-110B 与其他 Qwen1.5 模型相似，采用了相同的 Transformer 解码器架构。它包含了分组查询注意力（GQA），在模型推理时更加高效。该模型支持 **32K tokens 的上下文长度**，同时它仍然是多语言的，支持英、中、法、西、德、俄、日、韩、越、阿等多种语言。
+
+Parler-TTS
+
+- Parler-TTS 是大名鼎鼎的 huggingface 推出的一款轻量级文本到语音（TTS）模型，它能够生成高质量、自然流畅的语音，并且能够模仿特定说话者的风格，包括性别、音高、说话风格等。
+
+- 这款模型是由 Dan Lyth 和 Simon King 创建，他们分别来自 Stability AI 和爱丁堡大学，共同撰写了论文[《Natural language guidance of high-fidelity text-to-speech with synthetic annotations》](https://arxiv.org/abs/2402.01912)。
+
+- 这个模型即是这一论文的复现。
+
+- https://huggingface.co/parler-tts/parler_tts_mini_v0.1
+
 
 
 

@@ -12,11 +12,17 @@ sticky: false
 
 ## PEFT 动机
 
-基于 Transformers 架构的大型语言模型（LLM），如 GPT、T5 和 BERT，已经在各种自然语言处理 (NLP) 任务中取得了最先进的结果。此外，还开始涉足其他领域，例如计算机视觉（VIT、Stable Diffusion、LayoutLM）和音频（Whisper、XLS-R）。传统的范式是对通用网络规模数据进行大规模预训练，然后对下游任务进行微调。与使用开箱即用的预训练 LLM（例如，零样本推理）相比，在下游数据集上微调这些预训练 LLM 会带来巨大的性能提升。
+基于 Transformers 架构的大型语言模型（LLM），如 GPT、T5 和 BERT，已经在各种自然语言处理 (NLP) 任务中取得了最先进的结果。此外，还开始涉足其他领域，例如计算机视觉（VIT、Stable Diffusion、LayoutLM）和音频（Whisper、XLS-R）。传统的范式是对通用网络规模数据进行大规模预训练，然后对下游任务进行微调。与使用开箱即用的预训练 LLM（例如，零样本推理）相比，**在下游数据集上微调这些预训练 LLM 会带来巨大的性能提升**。
 
-然而，随着模型变得越来越大，在消费级硬件上对模型进行全部参数的微调变得不可行。此外，为每个下游任务独立存储和部署微调模型变得非常昂贵，因为微调模型与原始预训练模型的大小相同。参数高效微调（PEFT）方法旨在解决这两个问题！
+参数高效微调（PEFT）方法旨在解决下面两个问题：
 
-PEFT 方法仅微调少量（额外）模型参数，同时冻结预训练 LLM 的大部分参数，从而大大降低了计算和存储成本。这也克服了灾难性遗忘的问题，这是在 LLM 的全参数微调期间观察到的一种现象。PEFT 方法也显示出在低数据状态下比微调更好，可以更好地泛化到域外场景。它可以应用于各种模态，例如图像分类以及 Stable diffusion dreambooth。
+- 随着模型变得越来越大，在消费级硬件上对模型 **进行全部参数的微调变得不可行**。
+
+- 此外，为每个下游任务独立存储和部署微调模型变得 **非常昂贵**，因为微调模型与原始预训练模型的大小相同。
+
+PEFT 方法仅 **微调少量（额外）模型参数**，同时冻结预训练 LLM 的大部分参数，从而大大降低了计算和存储成本。这也 **克服了灾难性遗忘的问题**，这是在 LLM 的全参数微调期间观察到的一种现象。
+
+PEFT 方法也显示出在低数据状态下比微调更好，可以 **更好地泛化到域外场景**。它可以应用于各种模态，例如图像分类以及 Stable diffusion dreambooth。
 
 - [灾难性遗忘论文地址](https://arxiv.org/abs/1312.6211)
 
@@ -433,11 +439,11 @@ element-wise product = element-wise multiplication = Hadamard product
 
 AdaLoRA 最终的 rank 分配结果如下图所示：
 
-![AdaLoRA rank 分配结果](/images/posts/AdaLoRA-resulting-rank-distribution.png)
+![AdaLoRA rank 分配结果](/images/posts/AdaLoRA/AdaLoRA-resulting-rank-distribution.png)
 
 作者发现：AdaLoRA 总是倾向于将更多的预算分配给 **FFN 和顶层**。这种行为与我们在下图中得出的经验结论一致，即 FFN 模型和顶层的权重矩阵**对于模型性能更为重要**。因此，它验证了我们提出的重要性指标可以指导 AdaLoRA 专注于关键模块。
 
-![AdaLoRA 论文中关于哪些参数权重对于 LoRA 而言更重要的分析](/images/posts/AdaLoRA-selected-layers-and-weight-matrix.png)
+![AdaLoRA 论文中关于哪些参数权重对于 LoRA 而言更重要的分析](/images/posts/AdaLoRA/AdaLoRA-selected-layers-and-weight-matrix.png)
 
 同时，AdaLoRA 生成的排名分布在不同的预算水平、任务和模型中是一致的。这意味着剩余参数的数量与 $$b^{(T)}$$ 成线性比例关系，因此我们可以调整 $$b^{(T)}$$ 来控制剩余参数。
 
