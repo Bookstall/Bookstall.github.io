@@ -594,15 +594,10 @@ pip install .
 
 - `adapter-transformers` 文档：https://docs.adapterhub.ml/
 
-- 
-
-
 
 ## ChatGLM
 
 - 博客：[ChatGLM：千亿基座的对话模型](https://chatglm.cn/blog)
-
-- 
 
 
 ## 参考

@@ -7,7 +7,7 @@ excerpt: PEFT（Parameter-Efficient Fint-Tuning）的综述
 keywords: PEFT
 title: 综述：PEFT（Parameter-Efficient Fint-Tuning）
 mathjax: true
-sticky: true
+sticky: False
 ---
 
 本文是对最新的（2023 年 4 月）综述论文 [《Scaling Down to Scale Up: A Guide to Parameter-Efficient Fine-Tuning》](http://arxiv.org/abs/2303.15647) 的一个阅读记录。
@@ -67,7 +67,7 @@ sticky: true
 
 - MIM Adapter：
   
-  - 知乎：[ICLR2022高分文章：将Adapter、prompt-tuning、LoRA等纳入统一的框架](https://zhuanlan.zhihu.com/p/436571527)
+  - 知乎：[ICLR2022 高分文章：将 Adapter、prompt-tuning、LoRA 等纳入统一的框架](https://zhuanlan.zhihu.com/p/436571527)
 
 
 

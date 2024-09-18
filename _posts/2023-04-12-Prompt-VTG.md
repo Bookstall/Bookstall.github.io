@@ -7,7 +7,7 @@ excerpt: Pre-training Video-Language Models
 keywords: Video
 title: Prompt-VTG：一些预训练的 Video-Language Model
 mathjax: true
-sticky: true
+sticky: False
 ---
 
 在提示学习（Prompt Learning）和提示微调（Prompt Tuning）领域，Prompt 集成算不算是一种数据增强技术？请一步一步进行思考，再给出详细的解释说明。

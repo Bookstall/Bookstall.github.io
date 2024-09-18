@@ -7,7 +7,7 @@ excerpt: Video Caption
 keywords: LM
 title: Video Caption
 mathjax: true
-sticky: true
+sticky: False
 ---
 
 
