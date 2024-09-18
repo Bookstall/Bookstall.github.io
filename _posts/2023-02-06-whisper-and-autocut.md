@@ -304,23 +304,31 @@ RuntimeError: imageio.ffmpeg.download() has been deprecated. Use 'pip install im
 [autocut:cut.py:L167] INFO   Saved media to 九转大肠最全前因后果（补档）_cut.mp4
 ```
 
+## faster-whisper
+
+> 参考：
+>
+> - github: [faster-whisper](https://github.com/SYSTRAN/faster-whisper)
+
+
+
 ## 更多
 
 - [MoviePy 文档](http://doc.moviepy.com.cn/index.html#)
 
 - [srt 文档](https://srt.readthedocs.io/en/latest/quickstart.html)
 
-- [srt's github](https://github.com/cdown/srt)
+- [github: srt](https://github.com/cdown/srt)
 
 - 基于 Whisper 的开源应用程序：[buzz](https://github.com/chidiwilliams/buzz)
 
 
 ## 参考
 
-- [autocut's github](https://github.com/mli/autocut)
+- [github: autocut](https://github.com/mli/autocut)
 
-- [whisper's github](https://github.com/openai/whisper)
+- [github: whisper](https://github.com/openai/whisper)
 
-- [OpenAI Whisper Blog](https://openai.com/blog/whisper/)
+- [OpenAI Whisper Blog: Introducing Whisper](https://openai.com/blog/whisper/)
 
 - [StackOverflow](https://stackoverflow.com/questions/55965507/runtimeerror-imageio-ffmpeg-download-has-been-deprecated-use-pip-install-im)

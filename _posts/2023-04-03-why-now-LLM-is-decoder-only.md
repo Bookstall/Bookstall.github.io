@@ -7,7 +7,7 @@ excerpt: 为什么现在的 LLM 都是 Decoder-only 架构？
 keywords: LM
 title: 为什么现在的 LLM 都是 Decoder-only 架构？
 mathjax: true
-sticky: true
+sticky: False
 ---
 
 本文主要参考了 [为什么现在的LLM都是Decoder-only的架构？](https://spaces.ac.cn/archives/9529)、[《为什么现在的LLM都是Decoder-only的架构？》FAQ](https://spaces.ac.cn/archives/9547) 和知乎问题 [《为什么现在的LLM都是Decoder only的架构？》](https://www.zhihu.com/question/588325646)，侵删。
